@@ -1,4 +1,13 @@
 language: ruby
-rvm:
-  - 2.2
-  - jruby
+branches:
+  only:
+    - main
+    - /^test-.*$/
+    - /^deploy-.*$/
+cache:
+  - bundler
+services:
+  - postgresql
+before_script:
+  - bundle install --jobs=3 --retry=3
+

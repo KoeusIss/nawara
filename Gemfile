@@ -29,7 +29,7 @@ group :test do
   gem 'database_cleaner-active_record'
   gem 'shoulda-matchers'
   gem 'simplecov'
-  gem 'coveralls'
+  gem 'coveralls', require: false
 end
 
 
